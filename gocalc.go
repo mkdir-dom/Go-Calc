@@ -10,6 +10,9 @@ func main() {
 	var operator string
 
 	resulttimes := times(firstnum, secondnum)
+	resultdivide := divide(firstnum, secondnum)
+	resultadd := add(firstnum, secondnum)
+	resultsubtract := subtract(firstnum, secondnum)
 
 	fmt.Println("Please enter your first number")
 	fmt.Scan(&firstnum)
@@ -22,10 +25,30 @@ func main() {
 
 	if operator == "*" {
 		fmt.Println(resulttimes)
+	} else if operator == "/" {
+		fmt.Println(resultdivide)
+	} else if operator == "+" {
+		fmt.Println(resultadd)
+	} else if operator == "-" {
+		fmt.Println(resultsubtract)
+	} else {
+		fmt.Println("Invalid entry")
 	}
 
 }
 
 func times(firstnum, secondnum float64) float64 {
 	return (firstnum * secondnum)
+}
+
+func divide(firstnum, secondnum float64) float64 {
+	return (firstnum / secondnum)
+}
+
+func add(firstnum, secondnum float64) float64 {
+	return (firstnum + secondnum)
+}
+
+func subtract(firstnum, secondnum float64) float64 {
+	return (firstnum - secondnum)
 }
