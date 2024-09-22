@@ -9,11 +9,6 @@ func main() {
 	var secondnum float64
 	var operator string
 
-	resulttimes := times(firstnum, secondnum)
-	resultdivide := divide(firstnum, secondnum)
-	resultadd := add(firstnum, secondnum)
-	resultsubtract := subtract(firstnum, secondnum)
-
 	fmt.Println("Please enter your first number")
 	fmt.Scan(&firstnum)
 
@@ -23,18 +18,21 @@ func main() {
 	fmt.Println("Please enter your operator")
 	fmt.Scan(&operator)
 
-	if operator == "*" {
-		fmt.Println(resulttimes)
-	} else if operator == "/" {
-		fmt.Println(resultdivide)
-	} else if operator == "+" {
-		fmt.Println(resultadd)
-	} else if operator == "-" {
-		fmt.Println(resultsubtract)
-	} else {
-		fmt.Println("Invalid entry")
-	}
+	resulttimes := times(firstnum, secondnum)
+	resultdivide := divide(firstnum, secondnum)
+	resultadd := add(firstnum, secondnum)
+	resultsubtract := subtract(firstnum, secondnum)
 
+	switch operator {
+	case "*":
+		fmt.Println(resulttimes)
+	case "/":
+		fmt.Println(resultdivide)
+	case "+":
+		fmt.Println(resultadd)
+	case "-":
+		fmt.Println(resultsubtract)
+	}
 }
 
 func times(firstnum, secondnum float64) float64 {
