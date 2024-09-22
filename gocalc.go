@@ -27,5 +27,5 @@ func main() {
 }
 
 func times(firstnum, secondnum float64) float64 {
-	return firstnum * secondnum
+	return (firstnum * secondnum)
 }
